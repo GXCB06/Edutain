@@ -1,0 +1,27 @@
+.testimonials {
+  background: #f7f7fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(106,130,251,0.08);
+  padding: 2rem 1.5rem;
+  width: 320px;
+  font-style: italic;
+}
+.testimonial-text {
+  margin-bottom: 1rem;
+}
+.testimonial-name {
+  color: #6a82fb;
+  font-weight: 600;
+}

@@ -1,0 +1,47 @@
+/* Fade-in animation for course cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.course-card {
+  animation: fadeInUp 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+/* CTA Button */
+.course-cta-btn {
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(106,130,251,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+.course-cta-btn:hover {
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+  transform: scale(1.05);
+}
+
+/* Badge */
+.course-badge {
+  display: inline-block;
+  background: #fc5c7d;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.2rem 0.8rem;
+  border-radius: 12px;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,355 @@
+.qualified-universities-section {
+  margin: 3.5rem 0 2.5rem 0;
+  padding: 2.5rem 0 2rem 0;
+  background: linear-gradient(90deg, #e0e7ff 0%, #fceabb 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(106,130,251,0.10);
+  text-align: center;
+}
+.qualified-universities-section.improved-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto 3rem auto;
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.qualified-universities-section.improved-center .qualified-title,
+.qualified-universities-section.improved-center .qualified-intro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.qualified-universities-section.improved-center .qualified-universities-list {
+  justify-content: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.qualified-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6a82fb;
+  margin-bottom: 2rem;
+}
+.qualified-universities-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3.5rem; /* More space between cards */
+  position: relative;
+}
+.qualified-universities-list.carousel {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  gap: 0;
+  scroll-snap-type: x mandatory;
+}
+.qualified-university-card-new {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 32px 0 rgba(106,130,251,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.04);
+  min-width: 270px;
+  max-width: 320px;
+  min-height: 420px;
+  position: relative;
+  display: block;
+  padding: 0 32px 32px 32px; /* Add left/right/bottom padding for space */
+  transition: box-shadow 0.22s, border 0.22s, transform 0.22s;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  /* Remove horizontal margin to let gap handle spacing */
+  border: 3px solid transparent;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  overflow: visible;
+  height: 420px;
+}
+.qualified-university-card-new.card-in {
+  opacity: 1;
+  transform: translateY(0) scale(1.05);
+}
+.qualified-university-card-new:hover {
+  box-shadow: 0 12px 40px 0 rgba(106,130,251,0.18), 0 4px 16px 0 rgba(0,0,0,0.08);
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+.qualified-university-card-new .qualified-badge-new {
+  animation: badge-bounce 1.2s cubic-bezier(.4,2,.6,1) 1;
+}
+@keyframes badge-bounce {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  80% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+.qualified-university-card-new .qualified-badge-new:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0.95;
+  pointer-events: none;
+  box-shadow: 0 2px 8px #0002;
+}
+.qualified-university-card-new.highlight {
+  /* Olympic gold medal effect for the center card */
+  transform: scale(1.18) translateY(-32px);
+  box-shadow: 0 0 0 12px #fffbe6, 0 12px 60px 0 #FFD70055, 0 8px 40px 0 #FFD70033, 0 6px 32px 0 #6a82fb22;
+  border: 5px solid #FFD700;
+  background: linear-gradient(120deg, #fffbe6 70%, #fff 100%);
+  z-index: 2;
+}
+.qualified-university-card-new:not(.highlight) {
+  /* Silver/Bronze effect for side cards */
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 4px 24px 0 #b0b0b055, 0 2px 12px 0 #b0b0b033, 0 2px 8px 0 #6a82fb11;
+  border: 4px solid #e0e7ff;
+  background: linear-gradient(120deg, #f8f8ff 80%, #fff 100%);
+}
+@media (max-width: 1100px) {
+  .qualified-universities-new-list {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .qualified-university-card-new.highlight {
+    transform: scale(1.08) translateY(-12px);
+  }
+  .qualified-university-card-new:not(.highlight) {
+    transform: scale(1) translateY(0);
+  }
+}
+.confetti-winner {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: confetti-burst 1.2s cubic-bezier(.4,2,.6,1) 1;
+}
+@keyframes confetti-burst {
+  0% { opacity: 0; transform: scale(0.7) translateY(-30px); }
+  60% { opacity: 1; transform: scale(1.1) translateY(0); }
+  100% { opacity: 0; transform: scale(1.2) translateY(30px); }
+}
+.qualified-title-new {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6a82fb;
+  margin-bottom: 5.5rem; /* Further increased space below headline for more separation */
+}
+.qualified-intro-new {
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 2.5rem;
+}
+.qualified-universities-new-list {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to keep all cards in one row */
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5rem; /* More space between cards */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (max-width: 1100px) {
+  .qualified-universities-new-list {
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem;
+  }
+}
+.qualified-university-card-new {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 32px 0 rgba(106,130,251,0.10), 0 1.5px 8px 0 rgba(0,0,0,0.04);
+  min-width: 270px;
+  max-width: 320px;
+  min-height: 420px;
+  position: relative;
+  display: block;
+  padding: 0 32px 32px 32px; /* Add left/right/bottom padding for space */
+  transition: box-shadow 0.22s, border 0.22s, transform 0.22s;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  /* Remove horizontal margin to let gap handle spacing */
+  border: 3px solid transparent;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  overflow: visible;
+  height: 420px;
+}
+.qualified-university-card-new.card-in {
+  opacity: 1;
+  transform: translateY(0) scale(1.05);
+}
+.qualified-university-card-new:hover {
+  box-shadow: 0 12px 40px 0 rgba(106,130,251,0.18), 0 4px 16px 0 rgba(0,0,0,0.08);
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+.qualified-university-card-new .qualified-badge-new {
+  animation: badge-bounce 1.2s cubic-bezier(.4,2,.6,1) 1;
+}
+@keyframes badge-bounce {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  80% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+.qualified-university-card-new .qualified-badge-new:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0.95;
+  pointer-events: none;
+  box-shadow: 0 2px 8px #0002;
+}
+.qualified-university-card-new.highlight {
+  /* Olympic gold medal effect for the center card */
+  transform: scale(1.18) translateY(-32px);
+  box-shadow: 0 0 0 12px #fffbe6, 0 12px 60px 0 #FFD70055, 0 8px 40px 0 #FFD70033, 0 6px 32px 0 #6a82fb22;
+  border: 5px solid #FFD700;
+  background: linear-gradient(120deg, #fffbe6 70%, #fff 100%);
+  z-index: 2;
+}
+.qualified-university-card-new:not(.highlight) {
+  /* Silver/Bronze effect for side cards */
+  transform: scale(1.05) translateY(-8px);
+  box-shadow: 0 4px 24px 0 #b0b0b055, 0 2px 12px 0 #b0b0b033, 0 2px 8px 0 #6a82fb11;
+  border: 4px solid #e0e7ff;
+  background: linear-gradient(120deg, #f8f8ff 80%, #fff 100%);
+}
+@media (max-width: 1100px) {
+  .qualified-universities-new-list {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .qualified-university-card-new.highlight {
+    transform: scale(1.08) translateY(-12px);
+  }
+  .qualified-university-card-new:not(.highlight) {
+    transform: scale(1) translateY(0);
+  }
+}
+.confetti-winner {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  animation: confetti-burst 1.2s cubic-bezier(.4,2,.6,1) 1;
+}
+@keyframes confetti-burst {
+  0% { opacity: 0; transform: scale(0.7) translateY(-30px); }
+  60% { opacity: 1; transform: scale(1.1) translateY(0); }
+  100% { opacity: 0; transform: scale(1.2) translateY(30px); }
+}
+.confetti-burst-effect {
+  pointer-events: none;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: 120px;
+  height: 60px;
+  z-index: 20;
+  animation: confetti-burst-effect 1.2s cubic-bezier(.4,2,.6,1) 1;
+}
+@keyframes confetti-burst-effect {
+  0% { opacity: 0; transform: scale(0.7) translateY(-30px); }
+  60% { opacity: 1; transform: scale(1.1) translateY(0); }
+  100% { opacity: 0; transform: scale(1.2) translateY(30px); }
+}
+.qualified-portfolio-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(90deg, #6a82fb 60%, #fceabb 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 16px;
+  padding: 5px 16px 5px 12px;
+  box-shadow: 0 2px 8px #6a82fb22;
+  margin-bottom: 12px;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 3;
+  transition: box-shadow 0.22s, filter 0.22s;
+}
+.qualified-portfolio-badge.show-glow,
+.qualified-portfolio-badge:focus,
+.qualified-portfolio-badge:hover {
+  box-shadow: 0 0 0 4px #6a82fb33, 0 2px 16px #fc5c7d33, 0 2px 8px #6a82fb22;
+  filter: drop-shadow(0 0 8px #6a82fb66);
+}
+.qualified-portfolio-badge-popup {
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translateX(-50%) translateY(10px);
+  background: #fff;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(106,130,251,0.18);
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 1000;
+  animation: qualified-popover-fade-in 0.22s cubic-bezier(.4,1.6,.6,1);
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+@keyframes qualified-popover-fade-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(30px) scale(0.97); }
+  to { opacity: 1; transform: translateX(-50%) translateY(10px) scale(1); }
+}
+.qualified-stats-new {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.qualified-stats-new span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #888;
+}
+.qualified-stats-new .accepted-number,
+.qualified-stats-new .success-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: normal;
+}

@@ -1,0 +1,88 @@
+.courses {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.course-card {
+  background: #f7f7fa;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(106,130,251,0.08);
+  padding: 2rem 1.5rem;
+  width: 260px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(106,130,251,0.12);
+}
+.course-card.flip-card {
+  perspective: 1200px;
+  min-height: 220px;
+  position: relative;
+  transition: transform 0.4s, box-shadow 0.4s, opacity 0.4s;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(.4,2,.6,1);
+  transform-style: preserve-3d;
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  background: #f7f7fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flip-card-front {
+  z-index: 2;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 3;
+  overflow-y: auto;
+}
+.course-card.active {
+  box-shadow: 0 8px 32px rgba(106,130,251,0.18);
+  border: 2px solid #6a82fb;
+}
+.course-desc ul {
+  text-align: left;
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.2rem;
+}
+.course-desc li {
+  margin-bottom: 0.5rem;
+}
+.course-price {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #6a82fb;
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .courses-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course-card {
+    width: 95vw;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,38 @@
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  color: #6a82fb;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5em 1.2em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(106,130,251,0.08);
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.2s, color 0.2s;
+}
+.dark-toggle:hover {
+  background: #6a82fb;
+  color: #fff;
+}
+body.dark-mode {
+  background: #181a20;
+  color: #f4f6fb;
+}
+body.dark-mode section, body.dark-mode .carousel-content, body.dark-mode .service-card, body.dark-mode .course-card, body.dark-mode .blog-card, body.dark-mode .portfolio-card, body.dark-mode .testimonial-card, body.dark-mode .faq-card {
+  background: #23263a !important;
+  color: #f4f6fb !important;
+  box-shadow: 0 2px 16px rgba(106,130,251,0.18);
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 {
+  color: #fff;
+}
+body.dark-mode .stat-label {
+  color: #b3b8d1;
+}
+body.dark-mode .social-icon {
+  color: #fff;
+}

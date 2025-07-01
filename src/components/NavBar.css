@@ -1,0 +1,176 @@
+.navbar {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(106,130,251,0.08);
+  padding: 1.2rem 3vw; /* More balanced, responsive horizontal padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+.nav-logo {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #6a82fb;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.nav-links {
+  display: flex;
+  gap: 2.5rem; /* Increased gap for more even spacing */
+  align-items: center;
+  position: static;
+  background: none;
+  box-shadow: none;
+  height: auto;
+  width: auto;
+  padding: 0;
+  transition: none;
+}
+.nav-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3rem 0.7rem;
+  border-radius: 18px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+  font-size: 1rem;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: #fff;
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap for more space between actions */
+  margin-left: 2.5rem; /* More left margin for balance */
+}
+.nav-cta {
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 24px;
+  padding: 0.5rem 1.2rem;
+  margin-left: 0.5rem;
+  margin-right: 1.5rem; /* Added right margin for spacing from edge */
+  box-shadow: 0 2px 8px rgba(106,130,251,0.10);
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.nav-cta:hover {
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+  transform: scale(1.05);
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* Tablet & Mobile styles */
+@media (max-width: 900px) {
+  .nav-center {
+    justify-content: flex-end;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 80vw;
+    max-width: 340px;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem 2rem 1rem;
+    gap: 2rem;
+    box-shadow: -2px 0 16px rgba(106,130,251,0.10);
+    z-index: 200;
+    transition: right 0.35s cubic-bezier(.4,0,.2,1);
+    display: flex;
+  }
+  .nav-links.open {
+    right: 0;
+  }
+  .nav-links a {
+    font-size: 1.15rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+  }
+  .nav-actions {
+    margin-left: 0;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--nav-text, #222);
+    z-index: 1100;
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.7rem 2vw; /* Less padding but still some space on mobile */
+  }
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+  .nav-links {
+    width: 100vw;
+    max-width: none;
+    padding: 4rem 0.5rem 1rem 0.5rem;
+    gap: 1.2rem;
+  }
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+  }
+}
+
+/* Dark mode support */
+body.dark-mode .navbar {
+  background: #23263a;
+  box-shadow: 0 2px 8px rgba(106,130,251,0.18);
+}
+body.dark-mode .nav-logo {
+  color: #fff;
+}
+body.dark-mode .nav-links a {
+  color: #f4f6fb;
+}
+body.dark-mode .nav-links a:hover, body.dark-mode .nav-links a.active {
+  color: #fff;
+  background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+}
+body.dark-mode .nav-links {
+  background: #23263a;
+}
+.tutor-photo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 1rem;
+}

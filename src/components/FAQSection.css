@@ -1,0 +1,24 @@
+.faq {
+  background: #f7f7fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+.faq-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.faq-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(106,130,251,0.08);
+  padding: 1.5rem 1.2rem;
+  width: 320px;
+  text-align: left;
+}
+.faq-card h4 {
+  margin-bottom: 0.5rem;
+  color: #6a82fb;
+}

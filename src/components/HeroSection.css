@@ -1,0 +1,29 @@
+.hero {
+  background: linear-gradient(120deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  padding: 80px 20px 100px 20px;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.hero-btn {
+  background: #fff;
+  color: #6a82fb;
+  padding: 0.8em 2em;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.hero-btn:hover {
+  background: #6a82fb;
+  color: #fff;
+  border: 1px solid #fff;
+}
